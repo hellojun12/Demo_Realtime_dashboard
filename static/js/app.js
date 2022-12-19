@@ -12,6 +12,8 @@ $(document).ready(function () {
        },
        {
           label: "Predict",
+          bordercolor:"rgba(255, 0, 0, 1)",
+          backgroundColor: "rgba(255,0,0,1",
           borderDash: [5, 5],
           fill: false
        }
@@ -19,7 +21,6 @@ $(document).ready(function () {
     },
     options: {
       borderWidth: 3,
-      borderColor: ['#F6C85F'],
       maintainAspectRatio:false
 
     },
@@ -31,17 +32,28 @@ $(document).ready(function () {
       datasets: [
         { 
           label: "threshold", 
-          fill: false
+          fill: false,
+          bordercolor: 'rgba(255, 0, 0, 1)',
+          backgroundColor: 'rgba(255, 0, 0, 1)'
+
        },
        {
           label: "distance",
-          fill: false
+          fill: false,
+          bordercolor: 'rgba(0, 0, 0, 1)',
+          backgroundColor: 'rgba(0, 0, 0, 1)'
        }
       ],
     },
+
     options: {
+
+      plugins: {
+        colors: {
+          forceOverride: true
+        }
+      },
       borderWidth: 3,
-      borderColor: ['rgba(22, 10, 10, 1)'],
       maintainAspectRatio: false
 
     },
