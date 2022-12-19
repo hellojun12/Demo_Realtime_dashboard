@@ -30,7 +30,7 @@ Generate random sequence of dummy sensor values and send it to our clients
 def background_thread():
     print("Generating random sensor values")
 
-    path = '/Users/junshickyoon/Workspace/Project/Demo_Realtime_dashboard/data/data.csv'
+    path = './data/data.csv'
     df = pd.read_csv(path)
     for i in range(len(df)):
 

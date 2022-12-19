@@ -1,9 +1,16 @@
+.container {
+
+    display:flex;
+    justify-content: center;
+}
+
+
 .hero {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     margin-top: 1em;
-    height: 50%;
+    width: 100vw;
 }
 .hero h2 {
     margin-top: 0;
@@ -20,13 +27,13 @@
 
 .hero .chart-container .line-container {
     
-    position: relative;
-    width: 50%;
-    height: 10vh;
+    width: 50vw;
+    height: 40vh;
+    margin-right: 10vh;
 }
 
 .hero .chart-container .anomaly-container {
 
-    width: 40%;
-    height: 100%;
+    width: 40vw;
+    height: 40vh;
 }

@@ -19,7 +19,8 @@ $(document).ready(function () {
     },
     options: {
       borderWidth: 3,
-      borderColor: ['rgba(0, 0, 255, 1)', 'rgba(0, 0, 0, 1)'],
+      borderColor: ['#F6C85F'],
+      maintainAspectRatio:false
 
     },
   });
@@ -40,7 +41,8 @@ $(document).ready(function () {
     },
     options: {
       borderWidth: 3,
-      borderColor: ['rgba(0, 0, 255, 1)', 'rgba(0, 0, 0, 1)'],
+      borderColor: ['rgba(22, 10, 10, 1)'],
+      maintainAspectRatio: false
 
     },
   });
@@ -82,8 +84,10 @@ $(document).ready(function () {
         dataset.data.push(Math.abs(pmin - pmin_pred));
       }
     })
-    myChart.update();
+    
     myChart2.update();
+    myChart.update();
+    
   }
 
 
