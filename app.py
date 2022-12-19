@@ -30,15 +30,16 @@ Generate random sequence of dummy sensor values and send it to our clients
 def background_thread():
     print("Generating random sensor values")
 
-
-    df = pd.read_csv('/home/junshick/Workspace/Project/data/bog_data.csv')
+    path = '/Users/junshickyoon/Workspace/Project/Demo_Realtime_dashboard/data/data.csv'
+    df = pd.read_csv(path)
     for i in range(len(df)):
 
         data = df.iloc[i, :]
 
         socketio.emit('updateSensorData', {'time' : str(data['TIME']), 'pmin': str(data['PIA205B-02A_MIN']), 
-                        'pmax': str(data['PIA205B-02A_MAX']), 'bog': str(data['BOG'])})
-        socketio.sleep(2)
+                        'pmax': str(data['PIA205B-02A_MAX']), 'bog': str(data['BOG']), 
+                        'pmin_pred': str(data['PMIN_PRED']), 'pmax_pred':str(data['PMAX_PRED'])})
+        socketio.sleep(1)
         
     # while True:
     #     dummy_sensor_value = round(random() * 100, 3)

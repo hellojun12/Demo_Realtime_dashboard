@@ -1,18 +1,32 @@
 .hero {
-    background: #eee;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     margin-top: 1em;
+    height: 50%;
 }
-
 .hero h2 {
     margin-top: 0;
     margin-bottom: 0.3em;
     text-align: center;
 }
 
+.hero .chart-container {
 
-.chart-container {
-	max-width: 800px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero .chart-container .line-container {
+    
+    position: relative;
+    width: 50%;
+    height: 10vh;
+}
+
+.hero .chart-container .anomaly-container {
+
+    width: 40%;
+    height: 100%;
 }
